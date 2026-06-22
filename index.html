@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Backend Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><span>@</span>shwetachaturvedi<span>/</span>portfolio</div>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <svg class="dep-graph" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#5A9E34"/>
+      </marker>
+    </defs>
+    <rect x="50"  y="200" width="110" height="32" rx="4" fill="none" stroke="#5A9E34" stroke-width="1"/>
+    <text x="105" y="221" text-anchor="middle" font-family="monospace" font-size="11" fill="#5A9E34">Spring Boot</text>
+    <rect x="250" y="120" width="110" height="32" rx="4" fill="none" stroke="#5A9E34" stroke-width="1"/>
+    <text x="305" y="141" text-anchor="middle" font-family="monospace" font-size="11" fill="#5A9E34">Spring MVC</text>
+    <rect x="250" y="280" width="110" height="32" rx="4" fill="none" stroke="#5A9E34" stroke-width="1"/>
+    <text x="305" y="301" text-anchor="middle" font-family="monospace" font-size="11" fill="#5A9E34">Spring Data</text>
+    <rect x="460" y="70"  width="90"  height="32" rx="4" fill="none" stroke="#77BC1F" stroke-width="1"/>
+    <text x="505" y="91"  text-anchor="middle" font-family="monospace" font-size="11" fill="#77BC1F">REST API</text>
+    <rect x="460" y="200" width="90"  height="32" rx="4" fill="none" stroke="#77BC1F" stroke-width="1"/>
+    <text x="505" y="221" text-anchor="middle" font-family="monospace" font-size="11" fill="#77BC1F">JPA/Hibernate</text>
+    <rect x="460" y="330" width="90"  height="32" rx="4" fill="none" stroke="#77BC1F" stroke-width="1"/>
+    <text x="505" y="351" text-anchor="middle" font-family="monospace" font-size="11" fill="#77BC1F">PostgreSQL</text>
+    <rect x="680" y="130" width="90"  height="32" rx="4" fill="none" stroke="#5A9E34" stroke-width="1"/>
+    <text x="725" y="151" text-anchor="middle" font-family="monospace" font-size="11" fill="#5A9E34">Kafka</text>
+    <rect x="680" y="260" width="90"  height="32" rx="4" fill="none" stroke="#5A9E34" stroke-width="1"/>
+    <text x="725" y="281" text-anchor="middle" font-family="monospace" font-size="11" fill="#5A9E34">Redis</text>
+    <rect x="900" y="180" width="90"  height="32" rx="4" fill="none" stroke="#77BC1F" stroke-width="1"/>
+    <text x="945" y="201" text-anchor="middle" font-family="monospace" font-size="11" fill="#77BC1F">Docker</text>
+    <line x1="160" y1="216" x2="250" y2="136" stroke="#5A9E34" stroke-width="0.6" marker-end="url(#arrow)"/>
+    <line x1="160" y1="216" x2="250" y2="296" stroke="#5A9E34" stroke-width="0.6" marker-end="url(#arrow)"/>
+    <line x1="360" y1="136" x2="460" y2="86"  stroke="#77BC1F" stroke-width="0.6" marker-end="url(#arrow)"/>
+    <line x1="360" y1="296" x2="460" y2="216" stroke="#77BC1F" stroke-width="0.6" marker-end="url(#arrow)"/>
+    <line x1="360" y1="296" x2="460" y2="346" stroke="#77BC1F" stroke-width="0.6" marker-end="url(#arrow)"/>
+    <line x1="550" y1="86"  x2="680" y2="146" stroke="#5A9E34" stroke-width="0.6" marker-end="url(#arrow)"/>
+    <line x1="550" y1="216" x2="680" y2="276" stroke="#5A9E34" stroke-width="0.6" marker-end="url(#arrow)"/>
+    <line x1="770" y1="196" x2="900" y2="196" stroke="#77BC1F" stroke-width="0.6" marker-end="url(#arrow)"/>
+  </svg>
+
+  <div class="hero-left">
+    <div class="eyebrow">Available for opportunities</div>
+    <h1>
+      Building robust<br />
+      <span class="accent">Java & Spring</span><br />
+      backends
+    </h1>
+    <p class="hero-desc">
+Backend Engineer with 2.5 years of experience crafting scalable microservices, RESTful APIs, and distributed architectures within the Spring ecosystem. I design reliable, readable code built to handle production scale.    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+
+  <div class="terminal-card">
+    <div class="terminal-bar">
+      <div class="dot red"></div>
+      <div class="dot yellow"></div>
+      <div class="dot green"></div>
+      <span class="terminal-title">OrderService.java</span>
+    </div>
+    <div class="terminal-body">
+      <div><span class="line-num">1</span><span class="ann">@RestController</span></div>
+      <div><span class="line-num">2</span><span class="ann">@RequestMapping</span><span class="pun">(</span><span class="str">"/api/risk-assessment"</span><span class="pun">)</span></div>
+      <div><span class="line-num">3</span><span class="kw">public class</span> <span class="cls">RiskAssessmentController</span> {</div>
+      <div><span class="line-num">4</span></div>
+      <div><span class="line-num">5</span>&nbsp;&nbsp;<span class="ann">@Autowired</span></div>
+      <div><span class="line-num">6</span>&nbsp;&nbsp;<span class="kw">private</span> <span class="cls">RiskAssessmentService</span> riskAssessmentService;</div>
+      <div><span class="line-num">7</span></div>
+      <div><span class="line-num">8</span>&nbsp;&nbsp;<span class="ann">@PostMapping</span></div>
+      <div><span class="line-num">9</span>&nbsp;&nbsp;<span class="kw">public</span> <span class="cls">ResponseEntity</span>&lt;<span class="cls">RiskAssessment</span>&gt;</div>
+      <div><span class="line-num">10</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">assessTransactionRisk</span>(<span class="ann">@RequestBody</span></div>
+      <div><span class="line-num">11</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cls">TransactionRequest</span> request) {</div>
+      <div><span class="line-num">12</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="cls">ResponseEntity</span></div>
+      <div><span class="line-num">13</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">status</span>(<span class="cls">HttpStatus</span>.<span class="num">OK</span>)</div>
+      <div><span class="line-num">14</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">body</span>(riskAssessmentService</div>
+      <div><span class="line-num">15</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<span class="fn">assessTransactionRisk</span>(request));</div>
+      <div><span class="line-num">16</span>&nbsp;&nbsp;}</div>
+      <div><span class="line-num">17</span>}</div>
+      <div><span class="line-num">18</span><span class="com">// built for reliability and performance</span><span class="cursor"></span></div>
+    </div>
+  </div>
+</section>
+
+<div id="stats">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num">2.5+</div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">8+</div>
+      <div class="stat-label">Microservices Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">15+ </div>
+      <div class="stat-label">Features Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Production Go-Live</div>
+    </div>
+  </div>
+</div>
+
+<section id="skills">
+  <div class="section-label">// tech stack</div>
+  <h2>What I build with</h2>
+  <p class="section-sub">Deep expertise in the Java & Spring ecosystem, from REST to reactive to event-driven.</p>
+
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-icon">☕</div>
+      <div class="skill-group-title">Core Java</div>
+      <div class="skill-tags">
+        <span class="tag">Java 17/21</span>
+        <span class="tag">OOPs & SOLID</span>
+        <span class="tag">Collections & Generics</span>
+        <span class="tag">Streams API</span>
+        <span class="tag">Concurrency</span>
+        <span class="tag">JVM Fundamentals</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-icon">🍃</div>
+      <div class="skill-group-title">Spring Ecosystem</div>
+      <div class="skill-tags">
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Spring MVC</span>
+        <span class="tag">Spring Security</span>
+        <span class="tag">Spring Data JPA</span>
+        <span class="tag">Spring Cloud</span>
+        <span class="tag">Spring Batch</span>
+        <span class="tag">Spring Integration</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-icon">🗄️</div>
+      <div class="skill-group-title">Databases</div>
+      <div class="skill-tags">
+        <span class="tag">SQL Server</span>
+        <span class="tag dim">MongoDB</span>
+        <span class="tag">Query Optimization</span>
+        <span class="tag dim">Indexes</span>
+        <span class="tag">Hibernate</span>
+        <span class="tag">Redis</span>
+    
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-icon">🧪</div>
+      <div class="skill-group-title">Microservices</div>
+      <div class="skill-tags">
+        <span class="tag">RESTful Services</span>
+        <span class="tag">Service Discovery</span>
+        <span class="tag">API Gateway</span>
+        <span class="tag">Feign Client</span>
+        <span class="tag dim">Resilience Patterns</span>
+        <span class="tag dim">Distributed Systems</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <div class="skill-group-icon">🐳</div>
+      <div class="skill-group-title">DevOps & Infra</div>
+      <div class="skill-tags">
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">CI/CD (Jenkins)</span>
+        <span class="tag">Git & GitHub</span>
+        <span class="tag dim">AWS (EC2/S3/Lambda)</span>
+      </div>
+    </div>
+    
+    <div class="skill-group">
+      <div class="skill-group-icon">🛠️</div>
+      <div class="skill-group-title">Tooling & Practices</div>
+      <div class="skill-tags">
+        <span class="tag">Maven / Gradle</span>
+        <span class="tag">Swagger / OpenAPI</span>
+        <span class="tag">IntelliJ IDEA</span>
+        <span class="tag dim">SonarQube</span>
+        <span class="tag dim">Postman</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-label">// career</div>
+  <h2>Experience</h2>
+  <p class="section-sub">Building production systems that actually scale.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <span class="timeline-date">JAN 2026 — PRESENT</span>
+        <span class="timeline-badge">Current</span>
+      </div>
+      <div class="timeline-role">Software Engineer — Backend</div>
+      <div class="timeline-company">Mindefy Technologies Pvt Ltd · Full-time</div>
+      <p class="timeline-desc">
+        Designed and implemented 5+ microservices handling 50k+ daily transactions using Spring Boot and Kafka. Led migration from monolith to microservice architecture, reducing deployment time by 60%. Built a rate-limiting middleware using Redis that cut infrastructure costs by 30%.
+      </p>
+      <div class="skill-tags" style="margin-top:1rem">
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Kafka</span>
+        <span class="tag">Redis</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <span class="timeline-date">JAN 2024 — DEC 2025</span>
+      </div>
+      <div class="timeline-role">Junior Java Developer</div>
+      <div class="timeline-company">Mindefy Technologies Pvt Ltd · Full-time</div>
+      <p class="timeline-desc">
+        Built REST APIs and integrated third-party payment gateways using Spring MVC. Contributed to test coverage increasing from 40% to 78%. Implemented JWT-based authentication with Spring Security.
+      </p>
+      <div class="skill-tags" style="margin-top:1rem">
+        <span class="tag">Spring MVC</span>
+        <span class="tag">Spring Security</span>
+        <span class="tag">JUnit 5</span>
+        <span class="tag">MySQL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-label">// work</div>
+  <h2>Selected Projects</h2>
+  <p class="section-sub">Things I've built, shipped, and learned from.</p>
+
+  <div class="projects-grid">
+    <div class="project-card featured">
+      <div>
+        <div class="project-tag">Featured · Microservices</div>
+        <div class="project-name">Anti Money Laundering Platform(KrungThai Bank, Thailand)</div>
+        <p class="project-desc">
+Developed an automated Anti-Money Laundering (AML) reporting platform using Java, Spring Framework, and Hibernate to detect and analyze suspicious customer transactions. Implemented rule-based fraud detection and a dynamic report generation mechanism that selected AML templates based on fraud severity and classification. Collaborated with team members to refine requirements and deliver a secure, scalable solution that improved reporting efficiency and supported AML compliance.
+        </p>
+        <div class="project-stack">
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Kafka</span>
+          <span class="tag">Spring Cloud Gateway</span>
+          <span class="tag">Redis</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Docker Compose</span>
+        </div>
+        
+      </div>
+      <div class="arch-visual">
+        <div class="arch-box client">Client / Frontend</div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-box gateway">API Gateway (Spring Cloud)</div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-row">
+          <div class="arch-box service">Order<br/>Service</div>
+          <div class="arch-box service">Inventory<br/>Service</div>
+          <div class="arch-box service">Notify<br/>Service</div>
+        </div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-box kafka">Apache Kafka</div>
+        <div class="arch-arrow">↓</div>
+        <div class="arch-row">
+          <div class="arch-box db">PostgreSQL</div>
+          <div class="arch-box db">Redis Cache</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">REST API · Security</div>
+      <div class="project-name">Auth Service with JWT & RBAC</div>
+      <p class="project-desc">
+        Standalone authentication & authorization service with JWT tokens, refresh token rotation, and role-based access control using Spring Security. Includes OAuth2 social login.
+      </p>
+      <div class="project-stack">
+        <span class="tag">Spring Security</span>
+        <span class="tag">JWT</span>
+        <span class="tag">OAuth2</span>
+        <span class="tag">Redis</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">→ GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-tag">Spring Batch · Data</div>
+      <div class="project-name">ETL Pipeline — Report Generator</div>
+      <p class="project-desc">
+        Scheduled batch job using Spring Batch that processes 500k+ records nightly, generates PDF/Excel reports, and sends them via email. Includes retry logic and dead-letter handling.
+      </p>
+      <div class="project-stack">
+        <span class="tag">Spring Batch</span>
+        <span class="tag">Spring Scheduler</span>
+        <span class="tag">MySQL</span>
+        <span class="tag dim">JasperReports</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">→ GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-label" style="display:block; text-align:center; margin-bottom:0.6rem">// contact</div>
+    <h2>Let's build something together</h2>
+    <p>
+      Open to backend engineering roles
+    </p>
+    <a href="https://mail.google.com/mail/?view=cm&to=shwetachaturvedi4444@gmail.com" class="btn-primary" target="_blank">shwetachaturvedi4444@gmail.com</a>
+    <div class="social-links">
+      <a href="www.linkedin.com/in/shweta-chaturvedi05" class="social-link" target="_blank">LinkedIn</a>
+      <a href="/Shweta_Chaturvedi_CV.pdf" class="social-link" target="_blank">Resume PDF</a>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
