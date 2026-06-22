@@ -351,7 +351,7 @@ h2 {
   letter-spacing: 0.04em;
 }
 
-#skills { background: var(--spring-bg); }
+#skills { background: var(--spring-bg); padding-bottom: 1.5rem; }
 
 .skills-grid {
   display: grid;
@@ -359,14 +359,129 @@ h2 {
   gap: 1.5rem;
 }
 
+#skills { background: var(--spring-bg); padding-bottom: 1.5rem; }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 0.6rem 0;
+}
+
 .skill-group {
   background: var(--spring-surface);
   border: 1px solid var(--spring-border);
   border-radius: 8px;
-  padding: 1.6rem;
+  padding: 1.2rem 1.2rem 1.4rem;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.12s;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+#certification {
+  background: var(--spring-bg);
+  padding: 4rem 4rem 5rem;
+}
+
+.cert-card {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border: 1px solid #f4b84d;
+  box-shadow: 0 0 0 1px rgba(244,184,77,0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--spring-surface);
+}
+
+.cert-card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 1.6rem;
+}
+
+.cert-card-copy {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cert-card-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(90,158,52,0.14);
+  color: var(--spring-leaf);
+  font-size: 1rem;
+}
+
+.cert-card-title {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--spring-ink);
+}
+
+.cert-card-detail {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--spring-muted);
+  letter-spacing: 0.03em;
+}
+
+.cert-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: #E8F7D9;
+  color: var(--spring-leaf);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cert-footer-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.95rem 1.4rem 1rem;
+  background: #F9FAF4;
+  border-top: 1px solid var(--spring-border);
+}
+
+.cert-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--spring-leaf);
+  text-decoration: none;
+}
+
+.cert-footer-link:hover {
+  text-decoration: underline;
+}
+
+.cert-footer-divider {
+  width: 1px;
+  height: 15px;
+  background: var(--spring-border);
+}
+
+.cert-footer-icon {
+  font-size: 0.95rem;
 }
 
 .skill-group:hover {
@@ -632,6 +747,7 @@ h2 {
 .contact-inner {
   max-width: 600px;
   margin: 0 auto;
+  padding: 3rem 1rem 4rem;
 }
 
 .contact-inner h2 {
@@ -641,29 +757,86 @@ h2 {
 .contact-inner p {
   color: var(--spring-muted);
   font-size: 0.95rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   line-height: 1.7;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--spring-deep);
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact-phone a {
+  color: var(--spring-deep);
+  text-decoration: none;
+}
+
+.phone-icon,
+.email-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: var(--spring-tag-bg);
+  color: var(--spring-deep);
+  font-size: 0.95rem;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1.2rem;
+  font-size: 0.95rem;
+  min-width: auto;
+  max-width: 380px;
+  width: auto;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .social-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   color: var(--spring-dim);
   text-decoration: none;
-  padding: 0.6rem 1.2rem;
+  padding: 0.65rem 1.2rem;
   border: 1px solid var(--spring-border);
   border-radius: 4px;
   background: var(--spring-bg);
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
 }
 
 .social-link:hover {
